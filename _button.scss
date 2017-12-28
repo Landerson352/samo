@@ -1,0 +1,11 @@
+@import "variables";
+
+$landerson352-button-background: $brand-primary !default;
+$landerson352-button-color: white !default;
+$landerson352-button-border-radius: $border-radius-base !default;
+
+@mixin button($background: $landerson352-button-background, $color: $landerson352-button-color, $border-radius: $landerson352-button-border-radius) {
+  background: $background;
+  color: $color;
+  border-radius: $border-radius;
+}
