@@ -1,0 +1,56 @@
+@import "theme";
+
+$landerson352-component1-fill: $brand-primary !default;
+$landerson352-component1-opacity: 0.8 !default;
+$landerson352-component1-max-width: 50rem !default;
+$landerson352-component1-max-img-width: 25.625rem !default;
+$landerson352-component1-margin: 1.875rem !default;
+
+@mixin landerson352-component1($fill: $landerson352-component1-fill, $opacity: $landerson352-component1-opacity, $max-width: $landerson352-component1-max-width, $max-img-width: $landerson352-component1-max-img-width, $margin: $landerson352-component1-margin) {
+  & {
+    max-width: $max-width;
+    width: 100%;
+    margin: $margin;
+  }
+  &-content{
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  &-img {
+    max-width: $max-img-width;
+    width: auto;
+    height: auto;
+    position: relative;
+
+    img{
+      width: 100%;
+      height: auto;
+    }
+    &:before,
+    &:after {
+      position: absolute;
+      height: auto;
+      width: 40%;
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 488.78 900'%3E%3Cpolygon  style='fill: #{$fill}' points='184.78 0 0 900 304 900 488.78 0 184.78 0'/%3E%3C/svg%3E");
+    }
+    &:before {
+      z-index: -1;
+      left: -2rem;
+      top: 5.25rem;
+    }
+    &:after {
+      z-index: 2;
+      right: -0.5rem;
+      top: 1.375rem;
+      opacity: $opacity;
+    }
+  }
+  &-copy {
+    flex: 30%;
+    position: relative;
+    z-index: 5;
+    width: auto;
+    height: auto;
+  }
+}

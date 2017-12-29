@@ -1,14 +1,5 @@
-@import "variables";
+@import "mixins/button-row";
 
-$landerson352-button-row-gap: 0.626rem;
-$landerson352-button-row-margin: 1.25rem;
-
-@mixin landerson352-button-row($gap: $landerson352-button-row-gap, $margin: $landerson352-button-row-margin) {
-  display: flex;
-  flex-flow: row;
-  margin-bottom: $margin;
-
-  > * + * {
-     margin-left: $gap;
-   }
+.btn-row {
+  @include landerson352-button-row;
 }
